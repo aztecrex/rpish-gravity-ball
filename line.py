@@ -1,13 +1,11 @@
 from sense_hat import SenseHat
 sense = SenseHat()
 
-
 def plot(x,y):
     if x < 7 and x >= 0 and y < 7 and y >= 0:
-        sense.set_pixel()
+       sense.set_pixel(x, y, 0, 255, 0)
 
-
-def get_line(x1,y1,x2,y2):
+def plot_line(x1,y1,x2,y2):
     dx = x2 - x1
     dy = y2 - y1
 
@@ -40,3 +38,7 @@ def get_line(x1,y1,x2,y2):
         if error < 0:
             y += ystep
             error += dx
+
+sense.clear()
+plot_line(3,4,1,0)
+
