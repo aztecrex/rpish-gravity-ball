@@ -1,5 +1,6 @@
 from sense_hat import SenseHat, ACTION_PRESSED, ACTION_HELD, ACTION_RELEASED
 from signal import pause
+from line import plot_line
 
 x = 3
 y = 3
@@ -37,6 +38,10 @@ def pushed_right(event):
 
 def draw():
     sense.clear()
+    plot_line(0,0,x,y)
+    plot_line(0,7,x,y)
+    plot_line(7,0,x,y)
+    plot_line(7,7,x,y)
     sense.set_pixel(x, y, 255, 255, 255)
   
 

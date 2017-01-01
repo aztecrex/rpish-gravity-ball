@@ -2,7 +2,7 @@ from sense_hat import SenseHat
 sense = SenseHat()
 
 def plot(x,y):
-    if x < 7 and x >= 0 and y < 7 and y >= 0:
+    if x < 8 and x >= 0 and y < 8 and y >= 0:
        sense.set_pixel(x, y, 0, 255, 0)
 
 def plot_line(x1,y1,x2,y2):
@@ -15,11 +15,9 @@ def plot_line(x1,y1,x2,y2):
         x1, y1 = y1, x1
         x2, y2 = y2, x2
 
-    swapped = False
     if x1 > x2:
         x1, x2 = x2, x1
         y1, y2 = y2, y1
-#        swapped = True
 
     dx = x2 - x1
     dy = y2 - y1
