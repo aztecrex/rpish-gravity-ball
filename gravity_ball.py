@@ -36,9 +36,11 @@ draw(x, y)
 while True:
     accel = sense.get_accelerometer_raw()
     gx, gy = accel['x'], accel['y']
-#    mag = math.sqrt(gx * gx + gy * gy)
-#    if  mag > 0.15:
+    mag = math.sqrt(gx * gx + gy * gy)
     x = clamp(next(x, gx))
     y = clamp(next(y, gy));
     draw(x, y)
-    time.sleep(.15)
+    mag = math.sqrt(gx * gx + gy * gy)
+    amount = mag / .6
+    adjust = .1 * amount
+    time.sleep(.15 - adjust)
