@@ -39,6 +39,4 @@ def plot_line(x1,y1,x2,y2):
             y += ystep
             error += dx
 
-sense.clear()
-plot_line(3,4,1,0)
 
