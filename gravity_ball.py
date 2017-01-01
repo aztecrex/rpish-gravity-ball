@@ -43,4 +43,4 @@ while True:
     mag = math.sqrt(gx * gx + gy * gy)
     amount = mag / .6
     adjust = .1 * amount
-    time.sleep(.15 - adjust)
+    time.sleep(clamp(.15 - adjust, .01, .15))
