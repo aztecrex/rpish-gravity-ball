@@ -29,15 +29,19 @@ def next(v,gv):
         return v
 
 def pushed_up():
+    global r, g, b
     g = clamp(g + 1, 0, 255)
 
 def pushed_left():
+    global r, g, b
     r = clamp(r + 1, 0, 255)
 
 def pushed_right():
-    r = clamp(b + 1, 0, 255)
+    global r, g, b
+    b = clamp(b + 1, 0, 255)
 
 def pushed_down():
+    global r, g, b
     g = clamp(g - 1, 0, 255)
     r = clamp(r - 1, 0, 255)
     b = clamp(b - 1, 0, 255)
