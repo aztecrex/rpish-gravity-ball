@@ -15,21 +15,18 @@ def next(v,gv):
   else:
     return v
 
+sense.clear()
 x = 3
 y = 3
 while True:
-    sense.set_pixel(x,y)
-    time.sleep(.1)
     accel = sense.get_accelerometer_raw()
+    next_x = clamp(next(x, accel['x']))
+    next_y = clamp(next(y, accel['y']));
+    sense.set_pixel(next_x,next_y,255,255,255)
+    if next_x != x or next_y != y:
+      sense.set_pixel(x,y,0,0,0)
+    x = next_x;
+    y = next_y;
+    time.sleep(.15)
 
-    x = clamp(next(x, accel['x']))
-    y = clamp(next(y, -1 * accel['y']));
 
-    if x == -1:
-        sense.set_rotation(90)
-    elif y == 1:
-        sense.set_rotation(0)
-    elif y == -1:
-        sense.set_rotation(180)
-    else:
-        sense.set_rotation(270)
