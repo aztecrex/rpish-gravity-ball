@@ -22,9 +22,9 @@ def clamp(value, min_value=0, max_value=7):
     return min(max_value, max(min_value, value))
 
 def next(v,gv):
-    if gv < 0:
+    if gv < -0.12:
         return v - 1
-    elif gv > 0:
+    elif gv > 0.12:
         return v + 1
     else:
         return v
@@ -32,9 +32,13 @@ def next(v,gv):
 sense.clear()
 x = 3
 y = 3
+draw(x, y)
 while True:
     accel = sense.get_accelerometer_raw()
-    x = clamp(next(x, accel['x']))
-    y = clamp(next(y, accel['y']));
+    gx, gy = accel['x'], accel['y']
+#    mag = math.sqrt(gx * gx + gy * gy)
+#    if  mag > 0.15:
+    x = clamp(next(x, gx))
+    y = clamp(next(y, gy));
     draw(x, y)
     time.sleep(.15)
