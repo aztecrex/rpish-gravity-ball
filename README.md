@@ -2,6 +2,8 @@
 
 For [Sense Hat](https://www.raspberrypi.org/products/sense-hat/)
 
+Video [demo](https://youtu.be/Z-AgXPirZoM)
+
 ## Run it
 
 python gravity-ball.py
