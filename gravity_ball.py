@@ -30,21 +30,21 @@ def next(v,gv):
 
 def pushed_up():
     global r, g, b
-    r = clamp(r - 2, 0, 255)
-    g = clamp(g + 2, 0, 255)
-    b = clamp(b - 2, 0, 255)
+#    r = clamp(r - 2, 0, 255)
+    g = clamp(g + 4, 0, 255)
+#    b = clamp(b - 2, 0, 255)
 
 def pushed_left():
     global r, g, b
-    r = clamp(r + 2, 0, 255)
-    g = clamp(g - 2, 0, 255)
-    b = clamp(b - 2, 0, 255)
+    r = clamp(r + 4, 0, 255)
+#    g = clamp(g - 2, 0, 255)
+#    b = clamp(b - 2, 0, 255)
 
 def pushed_right():
     global r, g, b
-    r = clamp(r - 2, 0, 255)
-    g = clamp(g - 2, 0, 255)
-    b = clamp(b + 2, 0, 255)
+#    r = clamp(r - 2, 0, 255)
+#    g = clamp(g - 2, 0, 255)
+    b = clamp(b + 4, 0, 255)
 
 def pushed_down():
     global r, g, b
