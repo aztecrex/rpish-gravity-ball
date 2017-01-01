@@ -10,9 +10,10 @@ b = 255
 old_x = 0
 old_y = 0
 def draw(x,y):
-    sense.set_pixel(x,y,r,g,b)
+    global old_x, old_y, r, g, b
+    sense.set_pixel(x, y, r, g, b)
     if old_x != x or old_y != y:
-        sense.set_pixel(x, y,r, g, b)
+        sense.set_pixel(old_x, old_y, 0, 0, 0)
     old_x = x;
     old_y = y;
 
@@ -33,7 +34,7 @@ x = 3
 y = 3
 while True:
     accel = sense.get_accelerometer_raw()
-    next_x = clamp(next(x, accel['x']))
-    next_y = clamp(next(y, accel['y']));
-    draw(next_x, next_y, x, y)
+    x = clamp(next(x, accel['x']))
+    y = clamp(next(y, accel['y']));
+    draw(x, y)
     time.sleep(.15)
