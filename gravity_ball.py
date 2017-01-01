@@ -28,16 +28,16 @@ def next(v,gv):
     else:
         return v
 
-def pushed_up:
+def pushed_up():
     g = clamp(g + 1, 0, 255)
 
-def pushed_left:
+def pushed_left():
     r = clamp(r + 1, 0, 255)
 
-def pushed_right:
+def pushed_right():
     r = clamp(b + 1, 0, 255)
 
-def pushed_down:
+def pushed_down():
     g = clamp(g - 1, 0, 255)
     r = clamp(r - 1, 0, 255)
     b = clamp(b - 1, 0, 255)
