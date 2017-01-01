@@ -4,9 +4,9 @@ import time
 
 sense = SenseHat()
 
-r = 255
-g = 255
-b = 255
+r = 128
+g = 128
+b = 128
 old_x = 0
 old_y = 0
 def draw(x,y):
@@ -30,26 +30,39 @@ def next(v,gv):
 
 def pushed_up():
     global r, g, b
-    g = clamp(g + 1, 0, 255)
+    r = clamp(r - 2, 0, 255)
+    g = clamp(g + 2, 0, 255)
+    b = clamp(b - 2, 0, 255)
 
 def pushed_left():
     global r, g, b
-    r = clamp(r + 1, 0, 255)
+    r = clamp(r + 2, 0, 255)
+    g = clamp(g - 2, 0, 255)
+    b = clamp(b - 2, 0, 255)
 
 def pushed_right():
     global r, g, b
-    b = clamp(b + 1, 0, 255)
+    r = clamp(r - 2, 0, 255)
+    g = clamp(g - 2, 0, 255)
+    b = clamp(b + 2, 0, 255)
 
 def pushed_down():
     global r, g, b
-    g = clamp(g - 1, 0, 255)
-    r = clamp(r - 1, 0, 255)
-    b = clamp(b - 1, 0, 255)
+    g = clamp(g - 4, 0, 255)
+    r = clamp(r - 4, 0, 255)
+    b = clamp(b - 4, 0, 255)
+
+def pushed_middle():
+    global r, g, b
+    g = 128
+    r = 128
+    b = 128
 
 sense.stick.direction_up = pushed_up
 sense.stick.direction_down = pushed_down
 sense.stick.direction_left = pushed_left
 sense.stick.direction_right = pushed_right
+sense.stick.direction_middle = pushed_middle
 
 sense.clear()
 x = 3
