@@ -4,7 +4,7 @@ For [Sense Hat](https://www.raspberrypi.org/products/sense-hat/)
 
 ## Run it
 
-python gravity-ball.py
+python gravity_ball.py
 
 ## Use it
 
