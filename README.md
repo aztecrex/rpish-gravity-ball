@@ -1,15 +1,15 @@
-# RaspberyPi Sense Hat Experiments
+# Raspbery Pi Gravity Ball
 
-## reset_matrix.py
+For [Sense Hat](https://www.raspberrypi.org/products/sense-hat/)
 
-Clear and re-orient the matrix display.
+## Run it
 
-## gravity_ball.py
+python gravity-ball.py
 
-Roll the ball on the field by tilting the RPi. So much fun. The joystick gradually changes the color.
+## Use it
 
-## pixel_control.py
+Tilt the py to move the ball. More tilt == faster roll.
 
-Based on the example from the RPi SenseHat site. Move the pixel with
-the joystick. With some added lines coming in from the corners. Woo hoo.
+Joystick gradually changes the color, middle button resets the color.
+
 
