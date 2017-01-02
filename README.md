@@ -6,7 +6,7 @@ Video [demo](https://youtu.be/Z-AgXPirZoM)
 
 ## Run it
 
-python gravity_ball.py
+`./run.sh`
 
 ## Use it
 
