@@ -2,7 +2,7 @@
 
 For [Sense Hat](https://www.raspberrypi.org/products/sense-hat/)
 
-Video [demo](https://youtu.be/Z-AgXPirZoM)
+Video [demo](https://www.youtube.com/watch?v=QEkh4sJBqlA)
 
 ## Run it
 
